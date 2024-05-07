@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: data-query
+  jackson:
+    default-property-inclusion: non_empty
+    serialization:
+      close-closeable: true
+    deserialization:
+      fail-on-unknown-properties: false
+      adjust-dates-to-context-time-zone: false
+  liquibase:
+    change-log: classpath:/database/change-log.xml
+  main:
+    log-startup-info: true
+    web-application-type: servlet
+    banner-mode: off
+  web:
+    resources:
+      cache:
+        cachecontrol:
+          max-age: 30D
+      add-mappings: true
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      maximum-pool-size: 10
+  jpa:
+    open-in-view: false
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+      ddl-auto: validate
+  threads:
+    virtual:
+      enabled: true
+
+management:
+  metrics:
+    enable:
+      all: false
+
+server:
+  error:
+    whitelabel:
+      enabled: false
+  shutdown: graceful
+  forward-headers-strategy: framework

@@ -1,0 +1,31 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+    <!--    Tables -->
+    <changeSet author="system" id="1">
+        <createTable tableName="STORE_ITEM">
+            <column name="ID" type="VARCHAR(MAX)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="TITLE" type="VARCHAR(MAX)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CONTENT" type="VARCHAR(MAX)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="VIEWS" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="TIMESTAMP" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <!-- Constraints -->
+    <changeSet id="2" author="system">
+        <!-- PK -->
+        <addPrimaryKey tableName="STORE_ITEM" columnNames="ID" constraintName="PK_POST_ID"/>
+    </changeSet>
+</databaseChangeLog>

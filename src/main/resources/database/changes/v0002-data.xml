@@ -1,0 +1,32 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <!--    Data -->
+    <changeSet author="system" id="4">
+        <insert tableName="STORE_ITEM">
+            <column name="ID" value="POST_1"/>
+            <column name="TITLE" value="Title of the first storeItem"/>
+            <column name="CONTENT" value="This is some content for the first storeItem"/>
+            <column name="VIEWS" value="13"/>
+            <column name="TIMESTAMP" value="123"/>
+        </insert>
+        <insert tableName="STORE_ITEM">
+            <column name="ID" value="POST_2"/>
+            <column name="TITLE" value="Title of the second storeItem"/>
+            <column name="CONTENT"
+                    value="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed."/>
+            <column name="VIEWS" value="3"/>
+            <column name="TIMESTAMP" value="456"/>
+        </insert>
+        <insert tableName="STORE_ITEM">
+            <column name="ID" value="POST_3"/>
+            <column name="TITLE" value="Title of the third storeItem"/>
+            <column name="CONTENT"
+                    value="In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is available."/>
+            <column name="VIEWS" value="1"/>
+            <column name="TIMESTAMP" value="789"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
