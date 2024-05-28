@@ -2,7 +2,13 @@
 
 ## About
 
-This project is Data Query application
+This project is Data Query application which is used by WIX as testing assessment. Please note that filtering implemented using AST. 
+
+## Note
+Feed back from person which did the review:
+```
+Sollution ver engineered. Abusage of frameworks. Lack of negative tests.
+```
 
 ## Requirements
 
